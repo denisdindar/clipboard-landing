@@ -1,6 +1,4 @@
-# Frontend Mentor - Clipboard landing page solution
-
-![](screenshot.jpg)
+Clipboard landing page solution
 
 ### Links
 
@@ -11,7 +9,8 @@
 - Semantic HTML5 markup
 - SCSS and CSS
 - Flexbox
-- Mobile-first workflow
+- Responsive
+- Desktop-first workflow
 
 ## Author
 
