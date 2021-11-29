@@ -1,0 +1,402 @@
+/* Layout */
+.container {
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background-image: url(../images/bg-header-desktop.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  @include res(phone) {
+    background-image: url(../images/bg-header-mobile.png);
+    background-size: contain;
+  }
+
+  &__logo {
+    width: 130px;
+    height: 130px;
+    margin-top: 13rem;
+    margin-bottom: 6rem;
+
+    @include res(phone) {
+      width: 100px;
+      height: 100px;
+      margin-top: 9.5rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 0.9rem;
+
+    @include res(phone) {
+      margin: 0 1.25rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__text {
+    width: 45%;
+    margin: 0 auto;
+    margin-bottom: 3.8rem;
+
+    @include res(laptop) {
+      width: 70%;
+    }
+
+    @include res(phone) {
+      width: 93%;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    @include res(phone) {
+      flex-direction: column;
+    }
+  }
+}
+/* Main */
+.main {
+  @include res(laptop) {
+    margin: 0 5rem;
+  }
+  @include res(tablet) {
+    margin: 0 2.5rem;
+  }
+}
+
+/* Section About */
+
+.about {
+  @extend %section-start;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__text {
+    @extend %section-text;
+    margin-bottom: 7.5rem;
+
+    @include res(laptop) {
+      width: 70%;
+    }
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+
+    @include res(tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    width: 50%;
+    height: auto;
+    margin-left: -3.2rem;
+
+    @include res(laptop) {
+      margin-left: 0;
+    }
+
+    @include res(tablet) {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__info {
+    width: 340px;
+    margin-left: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+
+    @include res(tablet) {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    margin-bottom: 4rem;
+
+    @include res(laptop) {
+      margin-bottom: 2rem;
+    }
+
+    &-title {
+      margin-bottom: 1.2rem;
+
+      @include res(laptop) {
+        margin-bottom: 1rem;
+      }
+    }
+    &-text {
+      font-size: var(--font-size-xs);
+      line-height: 1.7;
+
+      @include res(tablet) {
+        width: 90%;
+        line-height: 1.5;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+/* Section Feature */
+.feature {
+  @extend %section-start;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__text {
+    @extend %section-text;
+    margin-bottom: 9rem;
+
+    @include res(phone) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Section Workflow */
+.workflow {
+  @extend %section-start;
+  margin-top: 10rem;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__text {
+    @extend %section-text;
+    margin-bottom: 8rem;
+
+    @include res(phone) {
+      margin-bottom: 7rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @include res(laptop) {
+      width: 90%;
+    }
+
+    @include res(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex: 1 1 33%;
+
+    &-icon {
+      max-width: 75%;
+      height: 3.2rem;
+      margin-bottom: 3rem;
+
+      @include res(phone) {
+        margin-bottom: 2rem;
+      }
+    }
+    &-title {
+      margin-bottom: 2rem;
+    }
+    &-text {
+      width: 90%;
+      font-size: var(--font-size-xs);
+      line-height: 1.7;
+      text-align: center;
+      margin: 0 auto;
+
+      @include res(phone) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
+
+/* Section Brands */
+.brands {
+  @extend %section-start;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include res(laptop) {
+    width: 90%;
+  }
+
+  @include res(phone) {
+    flex-direction: column;
+  }
+
+  & img {
+    @include res(tablet) {
+      max-width: 11rem;
+    }
+    @include res(phone) {
+      max-width: 100%;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+/* Section Download */
+.download {
+  @extend %section-start;
+
+  @include res(phone) {
+    margin-top: 12rem;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+  &__text {
+    @extend %section-text;
+    width: 45%;
+    margin: 0 auto;
+    margin-bottom: 3.8rem;
+
+    @include res(laptop) {
+      width: 70%;
+    }
+
+    @include res(phone) {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    @include res(phone) {
+      flex-direction: column;
+    }
+  }
+}
+
+/* Footer */
+.footer {
+  @extend %section-start;
+  background-color: #f5f6f8;
+  color: var(--color-dark);
+  font-size: var(--font-size-sm);
+
+  &__container {
+    width: 75%;
+    height: 150px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    @include res(laptop) {
+      width: 90%;
+    }
+
+    @include res(tablet) {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  &__logo {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-right: 13.5rem;
+
+    @include res(tablet) {
+      margin: 4rem 0;
+    }
+  }
+
+  &__nav {
+    list-style: none;
+    width: 570px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include res(tablet) {
+      width: 100%;
+      flex-direction: column;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__item {
+    text-align: left;
+    width: 180px;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+
+    @include res(tablet) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__social {
+    margin-left: auto;
+
+    @include res(tablet) {
+      margin-left: 0;
+      margin-bottom: 4rem;
+    }
+
+    & svg {
+      margin-left: 1.25rem;
+
+      @include res(tablet) {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+      }
+    }
+
+    & svg path {
+      transition: var(--transition);
+    }
+
+    & svg:hover path {
+      cursor: pointer;
+      fill: var(--color-primary);
+    }
+  }
+}

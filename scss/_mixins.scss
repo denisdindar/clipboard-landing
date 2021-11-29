@@ -1,0 +1,43 @@
+// Mixin Responsive
+$breakpoints: (
+  "phone": 480px,
+  "tablet": 768px,
+  "laptop": 1024px,
+  "desktop": 1200px,
+) !default;
+
+@mixin res($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+// Placeholders
+%section-start {
+  margin-top: var(--vertical-space);
+  text-align: center;
+
+  @include res(phone) {
+    margin-top: var(--vertical-space-sm);
+  }
+}
+
+%section-text {
+  width: 45%;
+  margin: 0 auto;
+  font-size: var(--font-size-sm);
+
+  @include res(laptop) {
+    width: 70%;
+  }
+
+  @include res(tablet) {
+    width: 80%;
+  }
+}
+
+%section-title {
+  margin-bottom: 2rem;
+}

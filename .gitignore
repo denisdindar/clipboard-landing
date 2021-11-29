@@ -1,0 +1,5 @@
+*.json
+*.fig
+*.map
+.DS_Store
+style-guide.md
