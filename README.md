@@ -1,17 +1,11 @@
-Clipboard landing page solution
+# Clipboard landing page solution
 
-### Links
+![Screen](/design/desktop-preview.jpg "Desktop Preview")
 
-- Live Site URL: [Clipboard Landing Page](https://happy-saha-9c8a0d.netlify.app/)
-
-### Built with
+Live Site URL: [Clipboard Landing Page](https://denisdindar.github.io/clipboard-landing/)
 
 - Semantic HTML5 markup
 - SCSS and CSS
 - Flexbox
 - Responsive
 - Desktop-first workflow
-
-## Author
-
-- Website - [denisdev](https://denisdev.netlify.app)
